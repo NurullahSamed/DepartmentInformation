@@ -12,13 +12,14 @@ import javax.swing.JPanel;
 
 public class Frame extends JFrame {
 	public Frame(Connection connection){
-    	//Frame kapatýldýðýnda ne olacaðý belirlendi.
+    	
+		//Frame kapatýldýðýnda ne olacaðý belirlendi.
     	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     	
-    	//Frame'in 2 satýr 1 sütün þeklinde bölüneceðini belirttik.
+    	//Frame'in layout tipi belirtildi.
     	this.setLayout(new FlowLayout());
     	
-    	
+    	//Frame'in içerisinde yer alacak iki ana panel oluþturuldu.
     	SorguPanel sorguPanel = new SorguPanel();
     	CiktiPanel ciktiPanel = new CiktiPanel();
     	
@@ -30,8 +31,10 @@ public class Frame extends JFrame {
     	//Çerçeve boyutlandýrýldý.
     	this.pack();
     	
+    	//Frame boyutu belirlendi ve boyutu deðiþtirilemez yapýldý.
     	this.setSize(600, 500);
     	this.setResizable(false);
+    	
     	//Görünür yapýldý.
     	this.setVisible(true);
 	}
