@@ -3,6 +3,8 @@ PostgreSQL kullanarak, bir arayüz aracılığıyla bazı sorguların yapılmas�
 
 Uygulamada kullanılan örnek veri tabanının PostgreSQL'de oluşturulması :
 
+[source,sql]
+----
 CREATE TYPE gender AS ENUM('M', 'F');
 
 CREATE TABLE employees (
@@ -64,5 +66,5 @@ CREATE TABLE salaries (
     FOREIGN KEY (emp_no) REFERENCES employees (emp_no) ON DELETE CASCADE,
     PRIMARY KEY (emp_no, from_date)
 ); 
-
+----
 
