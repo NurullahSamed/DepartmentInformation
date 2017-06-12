@@ -1,14 +1,9 @@
 package GUI;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.GridLayout;
-import java.sql.Connection;
 
-import javax.swing.BorderFactory;
-import javax.swing.BoxLayout;
+import java.awt.FlowLayout;
+import java.sql.Connection;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
+
 
 public class Frame extends JFrame {
 	public Frame(Connection connection){

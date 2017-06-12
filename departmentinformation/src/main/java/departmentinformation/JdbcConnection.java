@@ -1,11 +1,6 @@
 package departmentinformation;
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
 import java.sql.*;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+
 
 import GUI.Frame;
 public class JdbcConnection {
