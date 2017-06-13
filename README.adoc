@@ -59,3 +59,7 @@ CREATE TABLE salaries (
 ); 
 ----
 
+== EKRAN GÖRÜNTÜLERİ
+image:Screenshots/GUI-3.png[GUI, title="GUI"]
+image:Screenshots/GUI-2.png[GUI2, title="GUI"]
+image:Screenshots/GUI.png[GUI3, title="GUI"]
