@@ -48,7 +48,7 @@ public class SorguPanel extends JPanel {
     	btnCalisanEkle.setToolTipText("Calisan Ekle");
     	this.add(btnCalisanEkle);
     	//Butona listener eklendi.
-    	btnCalisanEkle.addActionListener(new CalisanEkle());
+    	btnCalisanEkle.addActionListener(new CalisanEkle(this,connection));
     	
     	//Programý ve veri tabaný baðlantýsýný kapatýcak buton eklendi.
      	JButton btnKapat = new JButton("Kapat");

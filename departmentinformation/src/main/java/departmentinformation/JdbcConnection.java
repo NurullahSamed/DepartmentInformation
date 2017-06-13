@@ -4,7 +4,8 @@ import java.sql.*;
 
 import GUI.Frame;
 public class JdbcConnection {
-
+	
+	private static Connection connection;
 	public static void main(String[] args) {
 		
 		System.out.println("-------- PostgreSQL "
@@ -25,8 +26,7 @@ public class JdbcConnection {
 
 		System.out.println("PostgreSQL JDBC Driver Bulundu !");
 
-		Connection connection = null;
-
+		connection = null;
 		try {
 
 			connection = DriverManager.getConnection(
@@ -50,6 +50,11 @@ public class JdbcConnection {
 		//Connection tipindeki nesne Frame nesnesine parametre olarak gönderildi.
 		Frame frame = new Frame(connection);
 	}
+	
+    protected void finalize() throws Throwable {
+        connection.close();
+        System.out.println("Baðlantý koparýldý.");
+    }
 	
 
 }
