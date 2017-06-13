@@ -15,8 +15,8 @@ public class Frame extends JFrame {
     	this.setLayout(new FlowLayout());
     	
     	//Frame'in içerisinde yer alacak iki ana panel oluþturuldu.
-    	SorguPanel sorguPanel = new SorguPanel();
     	CiktiPanel ciktiPanel = new CiktiPanel();
+    	SorguPanel sorguPanel = new SorguPanel(connection,ciktiPanel);
     	
 
     	//Bileþenler oluþturulup çerçeveye yerleþtirildi

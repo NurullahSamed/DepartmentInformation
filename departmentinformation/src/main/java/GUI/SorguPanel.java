@@ -3,6 +3,8 @@ package GUI;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.sql.Connection;
+
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -14,7 +16,9 @@ import departmentinformation.Kapat;
 
 public class SorguPanel extends JPanel {
 	
-	public SorguPanel(){
+	private JTextField entry;
+	
+	public SorguPanel(Connection connection,CiktiPanel cPanel){
 		
 		//Layout tipi,Çerçeve,Renk ve boyut deðiþkenleri belirlendi.
 		this.setLayout(new FlowLayout());
@@ -27,7 +31,7 @@ public class SorguPanel extends JPanel {
     	this.add(textView);
     	
     	//Departman numarasýnýn girileceði textField oluþturuldu.
-    	JTextField entry = new JTextField();
+    	entry = new JTextField();
     	entry.setPreferredSize(new Dimension(20, 20));
     	//entry.getText();
     	this.add(entry);
@@ -37,7 +41,7 @@ public class SorguPanel extends JPanel {
     	btnDeptBilgisi.setToolTipText("No'su girilen departmanýn bilgisini göster.");
     	this.add(btnDeptBilgisi);
     	//Butona listener eklendi.
-    	btnDeptBilgisi.addActionListener(new DeptBilgisi());
+    	btnDeptBilgisi.addActionListener(new DeptBilgisi(this,connection,cPanel));
     	
     	//Çalýþan ekleyecek buton eklendi.
     	JButton btnCalisanEkle = new JButton("Calisan Ekle");
@@ -51,7 +55,12 @@ public class SorguPanel extends JPanel {
      	btnKapat.setToolTipText("Kapat");
     	this.add(btnKapat);
     	//Butona listener eklendi.
-    	btnKapat.addActionListener(new Kapat());
+    	btnKapat.addActionListener(new Kapat(this,connection));
     	
 	}
+	
+	public JTextField getEntry(){
+		return entry;
+	}
+	
 }
